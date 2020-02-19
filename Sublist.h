@@ -4,6 +4,9 @@
 
 #ifndef PROJ2_SUBLIST_H
 #define PROJ2_SUBLIST_H
+#include "Stack.h"
+#include <iostream>
+using namespace std;
 
 class Element
 {
@@ -13,7 +16,7 @@ public:
     Element* prev;
 };
 
-class Sublist
+class Sublist : public Stack
 {
 public:
     Sublist();
@@ -34,4 +37,4 @@ private:
     Element* head;
 };
 
-#endif //PROJ2_SUBLIST_H
+#endif //STACK_SUBLIST_H

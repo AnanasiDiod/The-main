@@ -49,19 +49,19 @@ void Sublist::push_forward(int d) {
     head = new_element;
 }
 int Sublist::pop_back() {
-        length--;
-        int d;
-        Element *the_next = head;
-        Element *previous = nullptr;
-        while (the_next->next != nullptr){
-            previous = the_next;
-            the_next = the_next->next;
-        }
-        d = the_next->data;
-        if (previous == nullptr) head = nullptr;
-        else previous->next = nullptr;
-        delete the_next;
-        return d;
+    length--;
+    int d;
+    Element *the_next = head;
+    Element *previous = nullptr;
+    while (the_next->next != nullptr){
+        previous = the_next;
+        the_next = the_next->next;
+    }
+    d = the_next->data;
+    if (previous == nullptr) head = nullptr;
+    else previous->next = nullptr;
+    delete the_next;
+    return d;
 }
 int Sublist::pop_forward() {
     length--;
